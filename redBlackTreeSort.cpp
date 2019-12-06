@@ -5,6 +5,24 @@
 // 11/20/19
 // Seth Musselman, Avery Miller, Evan Oleary, Jeremy Martin, James Meyer, Tre' Moore
 
-int main() {
+#include "headerSort.h"
+#include <iostream>
+#include <cstdlib>
 
+int arr[] = { 5, 8, 22, 33, 1, 6, 54, 72, 89, 91, 25, 32, 42, 44, 3, 7, 17, 21, -1 };
+int n = sizeof(arr) / sizeof(arr[0]);
+
+int main() {
+	cout << "The example numbers are: ";
+	for (int i = 0; i < n; ++i)
+		cout << arr[i] << " ";
+	cout << endl;
+
+	treeSort(arr, n);
+
+	cout << "The example numbers sorted are: ";
+	for (int i = 0; i < n; ++i)
+		cout << arr[i] << " ";
+
+	return 0;
 }
